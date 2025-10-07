@@ -1,5 +1,7 @@
 import { FaAppStoreIos, FaGooglePlay } from "react-icons/fa";
 import banner from "../assets/hero.png";
+import SlotCounter from "react-slot-counter";
+import { Link } from "react-router";
 
 const Banner = () => {
   return (
@@ -18,18 +20,26 @@ const Banner = () => {
         </p>
       </div>
       <div className="flex items-center justify-center gap-4 lg:mt-12 mt-8">
-        <button className="btn">
+        <Link
+          className="btn"
+          to="https://play.google.com/store/games"
+          target="blank"
+        >
           <span className="text-[#9F62F2]">
             <FaGooglePlay />
           </span>
           Google Play
-        </button>
-        <button className="btn">
+        </Link>
+        <Link
+          className="btn"
+          to="https://www.apple.com/app-store/"
+          target="blank"
+        >
           <span className="text-[#9F62F2]">
             <FaAppStoreIos />
           </span>
           App Store
-        </button>
+        </Link>
       </div>
       <div className="pt-12 flex items-center justify-center">
         <img
@@ -45,19 +55,32 @@ const Banner = () => {
         <div className="flex md:flex-row flex-col items-center lg:gap-12 md:gap-8 gap-6 justify-center">
           <div className="lg:space-y-3 md:space-y-2 space-y-1 flex flex-col items-center">
             <p>Total Downloads</p>
-            <h2 className="lg:text-6xl md:text-4xl text-2xl font-bold">
-              29.6M
+            <h2 className="lg:text-6xl md:text-4xl text-2xl font-bold flex items-center">
+              <span>
+                <SlotCounter value={29.6} />
+              </span>
+              <span className="md:mt-2 mt-1">M</span>
             </h2>
             <p>21% more than last month</p>
           </div>
           <div className="lg:space-y-3 md:space-y-2 space-y-1 flex flex-col items-center">
             <p>Total Reviews</p>
-            <h2 className="lg:text-6xl md:text-4xl text-2xl font-bold">906K</h2>
+            <h2 className="lg:text-6xl md:text-4xl text-2xl font-bold flex items-center">
+              <span>
+                <SlotCounter value={906} />
+              </span>
+              <span className="md:mt-2 mt-1">K</span>
+            </h2>
             <p>46% more than last month</p>
           </div>
           <div className="lg:space-y-3 md:space-y-2 space-y-1 flex flex-col items-center">
             <p>Active Apps</p>
-            <h2 className="lg:text-6xl md:text-4xl text-2xl font-bold">132+</h2>
+            <h2 className="lg:text-6xl md:text-4xl text-2xl font-bold flex items-center">
+              <span>
+                <SlotCounter value={132} />
+              </span>
+              <span>+</span>
+            </h2>
             <p>31 more will Launch</p>
           </div>
         </div>
