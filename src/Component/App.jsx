@@ -12,7 +12,7 @@ const App = ({ app }) => {
           <img
             src={image}
             alt={title}
-            className="h-[316px] object-cover rounded-md"
+            className="h-[316px] w-full object-cover rounded-md"
           />
         </figure>
         <div className="space-y-6">
@@ -22,8 +22,8 @@ const App = ({ app }) => {
 
           <div className="flex justify-between items-center">
             <div className="bg-green-100 px-2 py-1 rounded-lg text-green-700 font-bold flex items-center gap-1">
-              <Download color="#047857" strokeWidth={1.5} size={18} />{" "}
-              {downloads}
+              <Download color="#047857" strokeWidth={1.5} size={18} />
+              {downloads}M
             </div>
             <div className="bg-amber-100 px-2 py-1 rounded-lg text-amber-700 font-bold">
               {ratingAvg === 5 ? (

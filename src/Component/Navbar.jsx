@@ -63,7 +63,7 @@ const Navbar = () => {
         <Link to="/" className="text-2xl font-bold flex gap-1 items-center">
           <span>
             <img
-              src={"./logo.png"}
+              src={"../logo.png"}
               alt="Appfinity"
               className="lg:w-10 object-cover md:w-8 w-7"
             />

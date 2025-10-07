@@ -2,13 +2,14 @@ import { TrendingUp } from "lucide-react";
 import useApp from "../Hooks/useApp";
 import LoadingSpinner from "./LoadingSpinner";
 import App from "./App";
+import { Link } from "react-router";
 
 const TrendingApps = () => {
   const { apps, loading, error } = useApp();
 
   const trendingApps = apps.slice(0, 8);
   return (
-    <div className="space-y-8 pb-12 w-11/12 mx-auto lg:px-8 md:px-4 px-2">
+    <div className="space-y-16 pb-12 w-11/12 mx-auto lg:px-8 md:px-4 px-2">
       <div className="space-y-4">
         <h2 className="lg:text-5xl md:text-4xl text-2xl font-bold flex items-center justify-center gap-2">
           <span>Trending Apps</span>
@@ -29,6 +30,11 @@ const TrendingApps = () => {
           ))}
         </div>
       )}
+      <div className="flex items-center justify-center">
+        <Link to="/apps" className="showAll">
+          Show All
+        </Link>
+      </div>
     </div>
   );
 };

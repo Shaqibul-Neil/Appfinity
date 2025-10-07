@@ -13,5 +13,8 @@ a.active {
   border-bottom: 2px solid #9f62f2;
 }
 .contribute {
-  @apply btn bg-gradient-to-r from-[#4C4CEA] to-[#9865F3] text-white flex gap-1 items-center lg:text-base;
+  @apply btn bg-gradient-to-r from-[#4C4CEA] to-[#9865F3] text-white flex gap-1 items-center lg:text-base hover:scale-95 transition-all duration-600;
+}
+.showAll {
+  @apply bg-gradient-to-r from-[#4C4CEA] to-[#9865F3] text-white w-48 py-2 rounded-md px-4 flex justify-center hover:scale-95 transition-all duration-600;
 }
