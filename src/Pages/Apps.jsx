@@ -3,18 +3,31 @@ import App from "../Component/App";
 import AppsLoadingSkeleton from "../Component/AppsLoadingSkeleton";
 import useApp from "../Hooks/useApp";
 import NoSearchedApp from "../Component/NoSearchedApp";
+import { MagnifyingGlass } from "react-loader-spinner";
 
 const Apps = () => {
   const [search, setSearch] = useState("");
+  const [searchLoading, setSearchLoading] = useState(false);
   const { apps, loading, error } = useApp();
+
   //getting the searched text
   const searchedApp = search.toLowerCase().trim();
+
   //filtering the main apps array to find the search item
   const searchedApps = search
     ? apps.filter((el) => el.title.toLowerCase().includes(searchedApp))
     : apps;
 
-  console.log(searchedApp);
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+    //set the search to true
+    setSearchLoading(true);
+    //add a timeout
+    setTimeout(() => {
+      setSearchLoading(false);
+    }, 1000);
+  };
+
   return loading ? (
     <AppsLoadingSkeleton />
   ) : (
@@ -52,13 +65,26 @@ const Apps = () => {
             type="search"
             placeholder="Search Apps"
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={handleSearch}
           />
         </label>
       </div>
 
       {searchedApps.length == 0 ? (
         <NoSearchedApp />
+      ) : searchLoading ? (
+        <div className="w-8/12 mx-auto flex justify-center">
+          <MagnifyingGlass
+            visible={true}
+            height="180"
+            width="180"
+            ariaLabel="magnifying-glass-loading"
+            wrapperStyle={{}}
+            wrapperClass="magnifying-glass-wrapper"
+            glassColor="#eadcff"
+            color="#9f62f2"
+          />
+        </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {searchedApps.map((app) => (
