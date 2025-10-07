@@ -8,7 +8,7 @@ import { MagnifyingGlass } from "react-loader-spinner";
 const Apps = () => {
   const [search, setSearch] = useState("");
   const [searchLoading, setSearchLoading] = useState(false);
-  const { apps, loading, error } = useApp();
+  const { apps, loading } = useApp();
 
   //getting the searched text
   const searchedApp = search.toLowerCase().trim();
@@ -71,7 +71,7 @@ const Apps = () => {
       </div>
 
       {searchedApps.length == 0 ? (
-        <NoSearchedApp />
+        <NoSearchedApp search={search} setSearch={setSearch} />
       ) : searchLoading ? (
         <div className="w-8/12 mx-auto flex justify-center">
           <MagnifyingGlass
