@@ -7,7 +7,7 @@ const Banner = () => {
   return (
     <section className="lg:py-24 md:py-20 py-16">
       <div className="lg:space-y-6 space-y-4">
-        <h1 className="lg:text-7xl md:text-5xl text-4xl text-center font-bold lg:leading-[84px] md:leading-[60px] leading-[40px]">
+        <h1 className="lg:text-7xl md:text-5xl text-4xl text-center font-bold lg:leading-[84px] md:leading-[60px] leading-[40px] text-[#001931]">
           We Build <br />
           <span className="text-[#9F62F2]">Productive </span>
           Apps

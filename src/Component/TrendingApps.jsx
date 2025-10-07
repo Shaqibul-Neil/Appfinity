@@ -11,7 +11,7 @@ const TrendingApps = () => {
   return (
     <div className="space-y-16 pb-12 w-11/12 mx-auto lg:px-8 md:px-4 px-2">
       <div className="space-y-4">
-        <h2 className="lg:text-5xl md:text-4xl text-2xl font-bold flex items-center justify-center gap-2">
+        <h2 className="lg:text-5xl md:text-4xl text-2xl font-bold flex items-center justify-center gap-2 text-[#001931]">
           <span>Trending Apps</span>
           <span className="animate-pulse">
             <TrendingUp size={28} />
