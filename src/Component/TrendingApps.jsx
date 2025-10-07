@@ -1,6 +1,12 @@
 import { TrendingUp } from "lucide-react";
+import useApp from "../Hooks/useApp";
+import LoadingSpinner from "./LoadingSpinner";
+import App from "./App";
 
 const TrendingApps = () => {
+  const { apps, loading, error } = useApp();
+  console.log(apps);
+
   return (
     <div className="space-y-8 pb-12 w-11/12 mx-auto lg:px-8 md:px-4 px-2">
       <div className="space-y-4">
@@ -14,7 +20,15 @@ const TrendingApps = () => {
           Explore All Trending Apps on the Market developed by us
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+      {loading ? (
+        <LoadingSpinner />
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {apps.map((app) => (
+            <App key={app.id} app={app} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

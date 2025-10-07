@@ -1,0 +1,218 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.postimg.cc/c1z0SSs7/1.jpg",
+    "title": "TaskFlow Productivity App",
+    "companyName": "Nextgen Labs",
+    "description": "TaskFlow is your all-in-one productivity companion designed to streamline how you manage your daily tasks, projects, and personal goals. Built for freelancers, startups, and enterprises alike, TaskFlow introduces a clean and intuitive interface that focuses on clarity and efficiency. With powerful integrations to Google Calendar, Notion, and Slack, TaskFlow keeps you connected and on schedule. Whether you’re managing a small team or planning your own day, TaskFlow’s AI-based task prioritization system helps identify the most impactful actions to take first. Users can also customize boards, set smart reminders, and monitor progress with beautiful analytics. Security is at the heart of TaskFlow, featuring full encryption and two-factor authentication. Designed with responsiveness in mind, TaskFlow works seamlessly across desktop and mobile. It’s more than just a task manager — it’s a complete ecosystem for turning ideas into results.",
+    "size": 52,
+    "reviews": 1203,
+    "ratingAvg": 5,
+    "downloads": 98234,
+    "ratings": [
+      { "name": "1 star", "count": 4 },
+      { "name": "2 star", "count": 14 },
+      { "name": "3 star", "count": 124 },
+      { "name": "4 star", "count": 280 },
+      { "name": "5 star", "count": 711 }
+    ]
+  },
+  {
+    "id": 2,
+    "image": "https://i.postimg.cc/HxRYBDn4/2.jpg",
+    "title": "CodeVerse Learning Hub",
+    "companyName": "BinaryWorks",
+    "description": "CodeVerse is an interactive coding playground and learning environment that helps both beginners and professionals sharpen their programming skills. The app supports multiple languages including JavaScript, Python, and C++, with real-time collaboration tools so teams can code together no matter where they are. With built-in AI suggestions, CodeVerse detects syntax errors, offers better code completion, and even provides refactoring tips. Learners can take guided challenges that adapt to their level of expertise, making the experience both educational and rewarding. CodeVerse also allows teachers to create private classrooms, monitor student progress, and share interactive lessons. With a minimal design and dark mode support, the app enhances focus while reducing eye strain. From coding bootcamps to solo developers, CodeVerse is redefining how people learn to code in a fast, connected world.",
+    "size": 89,
+    "reviews": 972,
+    "ratingAvg": 5,
+    "downloads": 203411,
+    "ratings": [
+      { "name": "1 star", "count": 2 },
+      { "name": "2 star", "count": 1 },
+      { "name": "3 star", "count": 8 },
+      { "name": "4 star", "count": 9 },
+      { "name": "5 star", "count": 612 }
+    ]
+  },
+  {
+    "id": 3,
+    "image": "https://i.postimg.cc/xdFn1DK4/3.jpg",
+    "title": "ShopEase Smart Shopping",
+    "companyName": "UrbanCart",
+    "description": "ShopEase is a next-generation shopping companion built to simplify how you discover, compare, and purchase products online. Powered by advanced AI and real-time market analytics, ShopEase delivers personalized recommendations that actually make sense. The app tracks price drops, highlights verified reviews, and lets you save favorite items into custom collections. With a sleek, ad-free experience, ShopEase prioritizes convenience and trust. It’s designed for both buyers and sellers, offering built-in store management and secure payment processing. ShopEase also includes a loyalty points system where users earn rewards on every transaction, redeemable for exclusive deals. The app’s social shopping features let users share finds, follow friends, and review products visually. Whether you’re shopping for fashion, tech, or lifestyle goods, ShopEase redefines eCommerce with simplicity and intelligence.",
+    "size": 101,
+    "reviews": 5632,
+    "ratingAvg": 4.5,
+    "downloads": 102354,
+    "ratings": [
+      { "name": "1 star", "count": 343 },
+      { "name": "2 star", "count": 492 },
+      { "name": "3 star", "count": 921 },
+      { "name": "4 star", "count": 1482 },
+      { "name": "5 star", "count": 2394 }
+    ]
+  },
+  {
+    "id": 4,
+    "image": "https://i.postimg.cc/L5jpDJrP/4.jpg",
+    "title": "HealthMate Tracker",
+    "companyName": "FitWave Technologies",
+    "description": "HealthMate is a complete health tracking app that brings together fitness, sleep, nutrition, and mental wellness in one dashboard. Built for the modern lifestyle, it uses smart algorithms to analyze your habits and provide actionable insights. Whether you’re counting calories, monitoring heart rate, or following a workout routine, HealthMate adapts to your needs. Users can sync their wearables, set health goals, and get AI-generated recommendations. The app also includes mindfulness sessions, hydration reminders, and a detailed sleep quality report. HealthMate’s elegant UI and easy-to-read charts make understanding your health journey a pleasure. Every bit of data is encrypted to ensure privacy and security. With continuous updates and new challenges added monthly, HealthMate keeps users motivated and accountable — because your well-being deserves consistency.",
+    "size": 95,
+    "reviews": 2889,
+    "ratingAvg": 4.6,
+    "downloads": 784212,
+    "ratings": [
+      { "name": "1 star", "count": 143 },
+      { "name": "2 star", "count": 221 },
+      { "name": "3 star", "count": 392 },
+      { "name": "4 star", "count": 810 },
+      { "name": "5 star", "count": 1323 }
+    ]
+  },
+  {
+    "id": 5,
+    "image": "https://i.postimg.cc/4d9k4K4z/5.jpg",
+    "title": "NoteSync Cloud Notes",
+    "companyName": "CloudMind",
+    "description": "NoteSync is the cloud-based note-taking and collaboration app that’s redefining productivity for creatives and professionals. It combines the simplicity of markdown editing with the power of real-time synchronization across all devices. Whether you’re jotting down ideas, drafting blog posts, or collaborating on research papers, NoteSync keeps your thoughts organized and instantly accessible. The app includes advanced search capabilities, offline mode, and customizable tags. Users can also attach media files, code snippets, or voice notes. With automatic backups and end-to-end encryption, your data is safe even when you’re offline. The interface is clean, minimal, and distraction-free, making writing feel effortless. NoteSync supports dark and light modes, drag-and-drop organization, and version history recovery. It’s more than a notepad — it’s your digital memory vault.",
+    "size": 67,
+    "reviews": 1562,
+    "ratingAvg": 5,
+    "downloads": 340982,
+    "ratings": [
+      { "name": "1 star", "count": 2 },
+      { "name": "2 star", "count": 5 },
+      { "name": "3 star", "count": 7 },
+      { "name": "4 star", "count": 20 },
+      { "name": "5 star", "count": 1237 }
+    ]
+  },
+  {
+    "id": 6,
+    "image": "https://i.postimg.cc/90hSWJn5/6.jpg",
+    "title": "SoundWave Music Player",
+    "companyName": "EchoPoint Audio",
+    "description": "SoundWave is the ultimate audio streaming and music management app created for audiophiles who crave both quality and control. Unlike typical streaming platforms, SoundWave gives you the power to fine-tune sound output with professional-grade equalizers and 3D spatial audio settings. You can stream, download, and organize your favorite tracks into smart playlists that automatically adjust to your mood and activity. The app learns your preferences over time and curates mixes you’ll actually love. It supports offline mode, lossless formats, and cross-device synchronization. For creators, SoundWave provides built-in podcast hosting, analytics, and audience management tools. With a sleek interface, dark aesthetic, and blazing-fast performance, SoundWave redefines what music streaming should feel like — immersive, intelligent, and deeply personal.",
+    "size": 83,
+    "reviews": 4831,
+    "ratingAvg": 4.6,
+    "downloads": 1004521,
+    "ratings": [
+      { "name": "1 star", "count": 231 },
+      { "name": "2 star", "count": 343 },
+      { "name": "3 star", "count": 562 },
+      { "name": "4 star", "count": 1042 },
+      { "name": "5 star", "count": 2653 }
+    ]
+  },
+  {
+    "id": 7,
+    "image": "https://i.postimg.cc/sgXLDBwf/7.jpg",
+    "title": "PhotoSmith Pro Editor",
+    "companyName": "PixelForge",
+    "description": "PhotoSmith is a professional-grade photo editing app designed for creators who demand precision, speed, and simplicity. Whether you’re touching up portraits or designing digital campaigns, PhotoSmith offers AI-powered filters, tone matching, and one-click background removal. With layer-based editing and vector support, it bridges the gap between mobile and desktop editors. Users can save custom presets, collaborate on shared projects, and export in high-res formats. Its auto-sync feature ensures that every edit is available across all your devices instantly. With a clean interface inspired by classic design tools and optimized for touch, PhotoSmith makes creative work both powerful and enjoyable. From influencers to design agencies, it’s become the go-to toolkit for visual perfectionists everywhere.",
+    "size": 120,
+    "reviews": 6142,
+    "ratingAvg": 4.8,
+    "downloads": 1429831,
+    "ratings": [
+      { "name": "1 star", "count": 221 },
+      { "name": "2 star", "count": 342 },
+      { "name": "3 star", "count": 654 },
+      { "name": "4 star", "count": 1254 },
+      { "name": "5 star", "count": 3671 }
+    ]
+  },
+  {
+    "id": 8,
+    "image": "https://i.postimg.cc/G3XJ3XN5/9.jpg",
+    "title": "FinTrack Money Manager",
+    "companyName": "WealthWise Systems",
+    "description": "FinTrack is a modern finance management app built for individuals and small businesses who want clarity and control over their money. With real-time analytics, expense categorization, and intelligent forecasting, FinTrack helps you understand where every dollar goes. It connects securely to your bank accounts and automatically categorizes transactions using machine learning. The app includes smart budgeting, bill reminders, and savings goal tracking. Users can generate detailed reports or visualize cash flow through dynamic charts. With privacy-first architecture and AES-256 encryption, your financial data stays secure. FinTrack’s minimal UI ensures simplicity without compromising power. Whether you’re tracking daily expenses or managing business invoices, FinTrack empowers you to take smarter financial decisions effortlessly.",
+    "size": 78,
+    "reviews": 3152,
+    "ratingAvg": 4.5,
+    "downloads": 623491,
+    "ratings": [
+      { "name": "1 star", "count": 212 },
+      { "name": "2 star", "count": 312 },
+      { "name": "3 star", "count": 542 },
+      { "name": "4 star", "count": 1042 },
+      { "name": "5 star", "count": 1044 }
+    ]
+  },
+  {
+    "id": 9,
+    "image": "https://i.postimg.cc/4yychTMc/10.jpg0",
+    "title": "MindBloom Meditation Hub",
+    "companyName": "NeuroHaven",
+    "description": "MindBloom is a wellness and meditation platform designed to improve mental clarity, emotional balance, and focus. Unlike generic meditation apps, MindBloom personalizes each user’s experience using neuroscience-backed insights and daily reflection logs. With ambient soundscapes, guided breathing, and sleep enhancement sessions, it’s a sanctuary for busy minds. The journaling system encourages emotional awareness, while AI-based recommendations help build consistent mindfulness habits. MindBloom integrates with wearable devices to track stress and mood trends in real-time. The soothing visuals and adaptive light themes create an immersive, calming environment. Whether you’re trying to reduce anxiety, sleep better, or simply pause from chaos — MindBloom helps you grow a calmer mind in a noisy world.",
+    "size": 92,
+    "reviews": 4265,
+    "ratingAvg": 4.7,
+    "downloads": 884123,
+    "ratings": [
+      { "name": "1 star", "count": 142 },
+      { "name": "2 star", "count": 202 },
+      { "name": "3 star", "count": 423 },
+      { "name": "4 star", "count": 1032 },
+      { "name": "5 star", "count": 2466 }
+    ]
+  },
+  {
+    "id": 10,
+    "image": "https://i.postimg.cc/13wqFBCm/11.jpg",
+    "title": "EduSphere Platform",
+    "companyName": "BrightPath Learning",
+    "description": "EduSphere is a complete digital learning ecosystem built to connect students, teachers, and institutions seamlessly. It features interactive classrooms, live assessments, and gamified learning paths that keep students engaged. The app supports video lectures, resource sharing, and performance tracking. Teachers can manage attendance, create assignments, and analyze progress with AI insights. EduSphere’s student dashboard adapts to learning pace, ensuring a personalized experience for every learner. With multilingual support and offline access, education truly becomes borderless. The app’s modern design, secure data handling, and low-latency video system make it ideal for schools, colleges, and independent tutors looking to build online communities that inspire lifelong learning.",
+    "size": 140,
+    "reviews": 5134,
+    "ratingAvg": 4.8,
+    "downloads": 1543821,
+    "ratings": [
+      { "name": "1 star", "count": 231 },
+      { "name": "2 star", "count": 321 },
+      { "name": "3 star", "count": 543 },
+      { "name": "4 star", "count": 1232 },
+      { "name": "5 star", "count": 2807 }
+    ]
+  },
+  {
+    "id": 11,
+    "image": "https://i.postimg.cc/nrNXj9qL/12.jpg",
+    "title": "TripGo Smart Travel",
+    "companyName": "WanderTech",
+    "description": "TripGo is the smart travel assistant that helps users plan, book, and manage their journeys effortlessly. It consolidates flights, hotels, and local experiences in one place. Using AI, TripGo builds itineraries tailored to your interests and budget. It even tracks real-time flight updates, weather conditions, and currency rates. The offline map feature ensures you never get lost, even in remote areas. Users can collaborate with travel buddies, share routes, and store digital documents securely. The design is optimized for clarity — minimal clutter, maximum focus. Whether you’re backpacking across Europe or attending a business conference, TripGo ensures your journey feels smooth, smart, and stress-free.",
+    "size": 112,
+    "reviews": 3982,
+    "ratingAvg": 4.6,
+    "downloads": 952413,
+    "ratings": [
+      { "name": "1 star", "count": 213 },
+      { "name": "2 star", "count": 312 },
+      { "name": "3 star", "count": 542 },
+      { "name": "4 star", "count": 1009 },
+      { "name": "5 star", "count": 1906 }
+    ]
+  },
+  {
+    "id": 12,
+    "image": "https://i.postimg.cc/zGCyvBvJ/13.jpg",
+    "title": "TimeVault Habit Tracker",
+    "companyName": "ChronoSoft",
+    "description": "TimeVault is a unique productivity and habit-tracking application designed to make every moment count. It allows users to track habits, log focus sessions, and visualize time spent on different tasks. The app features an innovative timeline view that reveals patterns of procrastination and productivity across days or weeks. Users can set milestones, receive motivational nudges, and sync progress to cloud storage. The AI assistant provides actionable insights and weekly summaries, helping you improve consistency over time. With minimalistic visuals and soothing animations, TimeVault turns discipline into an enjoyable experience. Whether you’re a student balancing study hours or a professional optimizing workflow, TimeVault keeps you aligned with your purpose.",
+    "size": 69,
+    "reviews": 2845,
+    "ratingAvg": 4.9,
+    "downloads": 456981,
+    "ratings": [
+      { "name": "1 star", "count": 41 },
+      { "name": "2 star", "count": 52 },
+      { "name": "3 star", "count": 121 },
+      { "name": "4 star", "count": 331 },
+      { "name": "5 star", "count": 2300 }
+    ]
+  }
+]
