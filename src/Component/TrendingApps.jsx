@@ -5,8 +5,8 @@ import App from "./App";
 
 const TrendingApps = () => {
   const { apps, loading, error } = useApp();
-  console.log(apps);
 
+  const trendingApps = apps.slice(0, 8);
   return (
     <div className="space-y-8 pb-12 w-11/12 mx-auto lg:px-8 md:px-4 px-2">
       <div className="space-y-4">
@@ -24,7 +24,7 @@ const TrendingApps = () => {
         <LoadingSpinner />
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {apps.map((app) => (
+          {trendingApps.map((app) => (
             <App key={app.id} app={app} />
           ))}
         </div>

@@ -4,9 +4,9 @@ import { FaStar } from "react-icons/fa6";
 import { Link } from "react-router";
 
 const App = ({ app }) => {
-  const { image, title, downloads, ratingAvg } = app;
+  const { id, image, title, downloads, ratingAvg } = app;
   return (
-    <Link to="/app-details/">
+    <Link to={`/app/${id}`}>
       <div className="card bg-base-100 shadow-sm p-4 space-y-4 hover:-translate-y-3 transition-all duration-300">
         <figure className="h-[316px]">
           <img
