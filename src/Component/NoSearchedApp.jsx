@@ -1,5 +1,5 @@
 const NoSearchedApp = () => {
-  return <div></div>;
+  return <div>nO SEARCH</div>;
 };
 
 export default NoSearchedApp;

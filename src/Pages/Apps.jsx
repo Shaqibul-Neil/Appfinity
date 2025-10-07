@@ -1,10 +1,23 @@
+import { useState } from "react";
 import App from "../Component/App";
-import LoadingSpinner from "../Component/LoadingSpinner";
+import AppsLoadingSkeleton from "../Component/AppsLoadingSkeleton";
 import useApp from "../Hooks/useApp";
+import NoSearchedApp from "../Component/NoSearchedApp";
 
 const Apps = () => {
+  const [search, setSearch] = useState("");
   const { apps, loading, error } = useApp();
-  return (
+  //getting the searched text
+  const searchedApp = search.toLowerCase().trim();
+  //filtering the main apps array to find the search item
+  const searchedApps = search
+    ? apps.filter((el) => el.title.toLowerCase().includes(searchedApp))
+    : apps;
+
+  console.log(searchedApp);
+  return loading ? (
+    <AppsLoadingSkeleton />
+  ) : (
     <div className="lg:space-y-16 md:space-y-12 space-y-8 py-16 w-11/12 mx-auto lg:px-8 md:px-4 px-2">
       <div className="space-y-4">
         <h2 className="lg:text-5xl md:text-4xl text-2xl font-bold text-center text-[#001931]">
@@ -16,7 +29,7 @@ const Apps = () => {
       </div>
       <div className="flex md:flex-row flex-col justify-between items-center gap-4">
         <h2 className="lg:text-2xl text-lg font-semibold pb-1 border-b text-[#001931]">
-          ({apps.length}) Apps Found
+          ({searchedApps.length}) Apps Found
         </h2>
         <label className="input input-bordered input-primary">
           <svg
@@ -35,14 +48,20 @@ const Apps = () => {
               <path d="m21 21-4.3-4.3"></path>
             </g>
           </svg>
-          <input type="search" placeholder="Search Apps" />
+          <input
+            type="search"
+            placeholder="Search Apps"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
         </label>
       </div>
-      {loading ? (
-        <LoadingSpinner count={apps.length} />
+
+      {searchedApps.length == 0 ? (
+        <NoSearchedApp />
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {apps.map((app) => (
+          {searchedApps.map((app) => (
             <App key={app.id} app={app} />
           ))}
         </div>
