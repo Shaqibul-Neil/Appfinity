@@ -1,11 +1,11 @@
 import Banner from "../Component/Banner";
-import TrendingApp from "../Component/TrendingApp";
+import TrendingApps from "../Component/TrendingApps";
 
 const Home = () => {
   return (
     <>
       <Banner />
-      <TrendingApp />
+      <TrendingApps />
     </>
   );
 };
