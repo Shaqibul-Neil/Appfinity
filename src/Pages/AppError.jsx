@@ -7,7 +7,7 @@ const AppError = () => {
         <img src={appError} alt="" className="w-80" />
       </div>
 
-      <h2 className="text-center text-2xl text-gray-600 font-bold tracking-wider">
+      <h2 className="text-center md:text-2xl text-xl text-gray-600 font-bold tracking-wider">
         Oops. Nothing to see here. Just an empty space in the internet void. Try
         going all apps section — it's nicer there.
       </h2>

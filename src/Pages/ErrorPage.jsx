@@ -16,12 +16,12 @@ const ErrorPage = () => {
               <img src={error} alt="" className="w-80" />
             </div>
 
-            <h2 className="text-center text-2xl text-gray-600 font-bold tracking-wider">
+            <h2 className="text-center md:text-2xl text-xl text-gray-600 font-bold tracking-wider">
               404: This page couldn't be found. Maybe it was deleted, moved, or
               just got tired of existing. Either way, you can head home or
               explore our apps instead.
             </h2>
-            <div className="flex justify-center items-center gap-4">
+            <div className="flex justify-center md:flex-row flex-col items-center gap-4">
               <Link to="/" className="showAll">
                 Go Home
               </Link>

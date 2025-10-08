@@ -21,7 +21,6 @@ const AppDetails = () => {
   const app = apps.find((el) => el.id === Number(id));
 
   //check Local Storage on page load----- took AI's help here
-
   useEffect(() => {
     if (!app) return; //if app is not loaded then don't run this
     const savedApps = getAppFromLocalStorage();
