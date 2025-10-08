@@ -1,4 +1,5 @@
 import { useParams } from "react-router";
+import { ToastContainer, toast } from "react-toastify";
 import useApp from "../Hooks/useApp";
 import RatingsChart from "./RatingsChart";
 import download from "../assets/icon-downloads.png";
@@ -7,8 +8,10 @@ import rating from "../assets/icon-ratings.png";
 import AppDetailsSkeleton from "./AppDetailsSkeleton";
 import ErrorPage from "../Pages/ErrorPage";
 import AppError from "../Pages/AppError";
+import { useState } from "react";
 
 const AppDetails = () => {
+  const [showInstall, setShowInstall] = useState(true);
   const { apps, loading, error } = useApp();
   const { id } = useParams();
   if (loading) return <AppDetailsSkeleton />;
@@ -16,6 +19,7 @@ const AppDetails = () => {
   //finding the relevant app id
   const app = apps.find((el) => el.id === Number(id));
   if (!app) return <AppError />;
+  //getting the app info
   const {
     image,
     title,
@@ -27,6 +31,35 @@ const AppDetails = () => {
     downloads,
     ratings,
   } = app || {};
+
+  //adding to localstorage
+  const handleAddStorage = () => {
+    //getting data from local storage
+    const getExistingApp = JSON.parse(localStorage.getItem("appList"));
+    let updatedAppList = [];
+    //if data exist
+    if (getExistingApp) {
+      //it data is already in the storage
+      const isDuplicate = getExistingApp.some((item) => item.id === app.id);
+      if (isDuplicate)
+        return toast.error(`Already Installed ${app.title}`, {
+          theme: "dark",
+          position: "bottom-right",
+        });
+      updatedAppList = [...getExistingApp, app];
+    } else {
+      //if no data available
+      updatedAppList.push(app);
+      toast.success(`You've Successfully Installed ${app.title}`, {
+        theme: "dark",
+        position: "bottom-right",
+      });
+    }
+    console.log(updatedAppList);
+    //save data to local storage
+    localStorage.setItem("appList", JSON.stringify(updatedAppList));
+    setShowInstall(false);
+  };
 
   return (
     <div className="w-11/12 mx-auto lg:px-8 md:px-4 px-2">
@@ -88,8 +121,12 @@ const AppDetails = () => {
           </div>
 
           <div className="flex items-center gap-6 lg:justify-start justify-center">
-            <button className="btn bg-[#00D390] rounded-lg cursor-pointer text-lg text-white shadow-2xl hover:bg-white hover:text-[#00D390] hover:border-[#00D390] transition-all duration-300">
-              Install Now ({size}MB)
+            <button
+              className="btnIns"
+              onClick={handleAddStorage}
+              disabled={showInstall === false}
+            >
+              {showInstall ? `Install Now (${size}MB)` : "Installed"}
             </button>
           </div>
         </div>
@@ -110,6 +147,7 @@ const AppDetails = () => {
           ))}
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

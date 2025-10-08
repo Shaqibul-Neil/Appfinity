@@ -1,9 +1,20 @@
+import { useEffect, useState } from "react";
 import InstalledLoadingSpinner from "../Component/InstalledLoadingSpinner";
 import useApp from "../Hooks/useApp";
+import NoInstalledApp from "../Component/NoInstalledApp";
+import InstalledApp from "../Component/InstalledApp";
 
 const Installation = () => {
+  const [installedApps, setInstalledApp] = useState([]);
+  //getting data from local storage
+  useEffect(() => {
+    const getExistingApp = JSON.parse(localStorage.getItem("appList"));
+    if (getExistingApp) setInstalledApp(getExistingApp);
+  }, []);
+
   const { loading } = useApp();
   if (loading) return <InstalledLoadingSpinner />;
+
   return (
     <div className="lg:space-y-16 md:space-y-12 space-y-8 py-16 w-11/12 mx-auto lg:px-8 md:px-4 px-2">
       <div className="space-y-4">
@@ -17,9 +28,15 @@ const Installation = () => {
 
       <div className="flex md:flex-row flex-col justify-between items-center gap-4">
         <h2 className="lg:text-2xl text-lg font-semibold pb-1 border-b text-[#001931]">
-          0 Apps Found
+          {installedApps.length < 9
+            ? `0${installedApps.length}`
+            : installedApps.length}{" "}
+          Apps Found
         </h2>
-        <select className="select select-primary">
+        <select
+          className="select select-primary"
+          disabled={installedApps.length === 0}
+        >
           <option disabled value="">
             Sort By Size
           </option>
@@ -27,7 +44,15 @@ const Installation = () => {
           <option value="size-desc">High - Low</option>
         </select>
       </div>
-      <div className="grid grid-cols-1 gap-4"></div>
+      {installedApps.length === 0 ? (
+        <NoInstalledApp />
+      ) : (
+        <div className="grid grid-cols-1 gap-4">
+          {installedApps.map((iApp) => (
+            <InstalledApp iApp={iApp} key={iApp.id} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

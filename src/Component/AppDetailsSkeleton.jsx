@@ -1,5 +1,5 @@
 const AppDetailsSkeleton = () => {
-  return <div>Loading...</div>;
+  return <div>App Loading...</div>;
 };
 
 export default AppDetailsSkeleton;
