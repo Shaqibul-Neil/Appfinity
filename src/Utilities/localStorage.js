@@ -19,7 +19,7 @@ export const updateAppList = (app) => {
         theme: "dark",
         position: "bottom-right",
       });
-      return false;
+      return false; // we need to send false here bcz we have a state named setShowInstall. That setter function will not know whether the app is installed or not if we don't send false here. also we need to sync the function with the ui. only because we are changing the btn state as disabled when clicking.
     }
     const newAppList = [...appList, app];
     localStorage.setItem("appList", JSON.stringify(newAppList));
@@ -33,10 +33,10 @@ export const updateAppList = (app) => {
         borderRadius: "8px",
       },
     });
-    return true;
+    return true; // we need to send false here bcz we have a state named setShowInstall. That setter function will not know whether the app is installed or not if we don't send true here: true : App installed successfully
   } catch (error) {
     console.log(error);
-    return false;
+    return false; //similar logic
   }
 };
 
