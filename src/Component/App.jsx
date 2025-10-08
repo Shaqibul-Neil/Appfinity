@@ -22,6 +22,7 @@ const App = ({ app }) => {
 
           <div className="flex justify-between items-center">
             <div className="bg-green-100 px-2 py-1 rounded-lg text-green-700 font-bold flex items-center gap-1">
+              <img src="" alt="" />
               <Download color="#047857" strokeWidth={1.5} size={18} />
               {downloads}M
             </div>

@@ -1,7 +1,9 @@
 import { useParams } from "react-router";
 import useApp from "../Hooks/useApp";
-import { Download } from "lucide-react";
 import RatingsChart from "./RatingsChart";
+import download from "../assets/icon-downloads.png";
+import review from "../assets/icon-review.png";
+import rating from "../assets/icon-ratings.png";
 
 const AppDetails = () => {
   const { apps, loading, error } = useApp();
@@ -43,35 +45,33 @@ const AppDetails = () => {
           <div className="flex md:flex-row flex-col items-center md:justify-start justify-center md:gap-10 gap-8">
             <div className="md:w-28 flex md:flex-col flex-row items-center justify-center gap-3">
               <div>
-                <p>
-                  <Download color="#047857" strokeWidth={2.5} size={40} />
-                </p>
+                <img src={download} alt="" className="h-8 w-8" />
               </div>
               <div className="text-center w-28">
                 <p className="text-sm text-gray-700">Downloads</p>
-                <h4 className="font-extrabold lg:text-4xl md:text-2xl">
+                <h4 className="font-extrabold lg:text-4xl md:text-2xl text-xl">
                   {downloads}M
                 </h4>
               </div>
             </div>
             <div className="md:w-28 flex md:flex-col flex-row items-center justify-center gap-3">
-              <p>
-                <Download color="#047857" strokeWidth={2.5} size={40} />
-              </p>
+              <div>
+                <img src={rating} alt="" className="h-8 w-8" />
+              </div>
               <div className="text-center w-28">
                 <p className="text-sm text-gray-700">Average Ratings</p>
-                <h4 className="font-extrabold lg:text-4xl md:text-2xl">
+                <h4 className="font-extrabold lg:text-4xl md:text-2xl text-xl">
                   {ratingAvg}
                 </h4>
               </div>
             </div>
             <div className="md:w-28 flex md:flex-col flex-row items-center justify-center gap-3">
-              <p>
-                <Download color="#047857" strokeWidth={2.5} size={40} />
-              </p>
+              <div>
+                <img src={review} alt="" className="h-8 w-8" />
+              </div>
               <div className="text-center w-28">
                 <p className="text-sm text-gray-700">Total Reviews</p>
-                <h4 className="font-extrabold lg:text-4xl md:text-2xl">
+                <h4 className="font-extrabold lg:text-4xl md:text-2xl text-xl">
                   {reviews}K
                 </h4>
               </div>

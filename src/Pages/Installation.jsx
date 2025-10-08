@@ -1,4 +1,9 @@
+import InstalledLoadingSpinner from "../Component/InstalledLoadingSpinner";
+import useApp from "../Hooks/useApp";
+
 const Installation = () => {
+  const { loading } = useApp();
+  if (loading) return <InstalledLoadingSpinner />;
   return (
     <div className="lg:space-y-16 md:space-y-12 space-y-8 py-16 w-11/12 mx-auto lg:px-8 md:px-4 px-2">
       <div className="space-y-4">
