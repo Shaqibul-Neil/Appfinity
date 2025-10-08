@@ -13,7 +13,7 @@ const router = createBrowserRouter([
       { index: true, Component: Home },
       { path: "/apps", Component: Apps },
       { path: "/installation", Component: Installation },
-      { path: "/app/:id", Component: AppDetails },
+      { path: "/apps/:id", Component: AppDetails },
     ],
   },
 ]);
