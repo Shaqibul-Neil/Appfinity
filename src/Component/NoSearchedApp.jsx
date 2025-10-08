@@ -9,8 +9,8 @@ const NoSearchedApp = ({ search, setSearch }) => {
         <Lottie animationData={emptySearch} loop={true} className="w-80 h-80" />
       </div>
       <div className="flex flex-col gap-8 justify-center">
-        <h2 className="text-center text-4xl text-gray-600 font-bold tracking-wider">
-          No Apps Found
+        <h2 className="text-center text-2xl text-gray-600 font-bold tracking-wider">
+          Oops! looks like this app packed up and left the store.
         </h2>
 
         <Link

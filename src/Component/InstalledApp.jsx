@@ -3,7 +3,7 @@ import download from "../assets/icon-downloads.png";
 import rating from "../assets/icon-ratings.png";
 
 const InstalledApp = ({ iApp }) => {
-  console.log(iApp);
+  // console.log(iApp);
   const { image, title, downloads, ratingAvg, size } = iApp;
   return (
     <div className="bg-white p-3 flex justify-between items-center md:flex-row flex-col gap-4 rounded-md">

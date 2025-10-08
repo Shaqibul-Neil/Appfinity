@@ -55,7 +55,7 @@ const AppDetails = () => {
         position: "bottom-right",
       });
     }
-    console.log(updatedAppList);
+    // console.log(updatedAppList);
     //save data to local storage
     localStorage.setItem("appList", JSON.stringify(updatedAppList));
     setShowInstall(false);

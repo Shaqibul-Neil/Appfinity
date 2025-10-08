@@ -6,6 +6,7 @@ const InstalledLoadingSpinner = () => {
         <div className="skeleton h-12 w-64 bg-gray-200"></div>
         <div className="skeleton h-12 w-64 bg-gray-200"></div>
       </div>
+      <div className="skeleton h-64 w-full bg-gray-200"></div>
     </div>
   );
 };

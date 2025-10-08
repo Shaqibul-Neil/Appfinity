@@ -6,6 +6,7 @@ import InstalledApp from "../Component/InstalledApp";
 
 const Installation = () => {
   const [installedApps, setInstalledApp] = useState([]);
+  const [sortBy, setSortBy] = useState("");
   //getting data from local storage
   useEffect(() => {
     const getExistingApp = JSON.parse(localStorage.getItem("appList"));
@@ -15,27 +16,34 @@ const Installation = () => {
   const { loading } = useApp();
   if (loading) return <InstalledLoadingSpinner />;
 
+  const sortedApps = [...installedApps].sort((a, b) => {
+    if (sortBy === "size-asc") return a.size - b.size;
+    if (sortBy === "size-desc") return b.size - a.size;
+    return 0;
+  });
+
   return (
-    <div className="lg:space-y-16 md:space-y-12 space-y-8 py-16 w-11/12 mx-auto lg:px-8 md:px-4 px-2">
+    <div className="installationDiv">
       <div className="space-y-4">
-        <h2 className="lg:text-5xl md:text-4xl text-2xl font-bold text-center text-[#001931]">
-          Your Installed Apps
-        </h2>
+        <h2 className="installationTitle">Your Installed Apps</h2>
         <p className="text-center md:px-0 px-8">
           Explore All Apps on the Market developed by us. We code for Millions
         </p>
       </div>
 
-      <div className="flex md:flex-row flex-col justify-between items-center gap-4">
-        <h2 className="lg:text-2xl text-lg font-semibold pb-1 border-b text-[#001931]">
-          {installedApps.length < 9
-            ? `0${installedApps.length}`
-            : installedApps.length}{" "}
-          Apps Found
+      <div className="installationCont">
+        <h2 className="installAppTitle">
+          {sortedApps.length === 0
+            ? "No Apps Installed"
+            : sortedApps.length < 9
+            ? `0${sortedApps.length} Apps Found`
+            : `${sortedApps.length} Apps Found`}
         </h2>
         <select
           className="select select-primary"
-          disabled={installedApps.length === 0}
+          disabled={sortedApps.length === 0}
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
         >
           <option disabled value="">
             Sort By Size
@@ -44,11 +52,11 @@ const Installation = () => {
           <option value="size-desc">High - Low</option>
         </select>
       </div>
-      {installedApps.length === 0 ? (
+      {sortedApps.length === 0 ? (
         <NoInstalledApp />
       ) : (
         <div className="grid grid-cols-1 gap-4">
-          {installedApps.map((iApp) => (
+          {sortedApps.map((iApp) => (
             <InstalledApp iApp={iApp} key={iApp.id} />
           ))}
         </div>
