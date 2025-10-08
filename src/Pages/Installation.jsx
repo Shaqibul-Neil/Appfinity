@@ -3,15 +3,13 @@ import InstalledLoadingSpinner from "../Component/InstalledLoadingSpinner";
 import useApp from "../Hooks/useApp";
 import NoInstalledApp from "../Component/NoInstalledApp";
 import InstalledApp from "../Component/InstalledApp";
+import { getAppFromLocalStorage } from "../Utilities/localStorage";
 
 const Installation = () => {
-  const [installedApps, setInstalledApp] = useState([]);
+  const [installedApps, setInstalledApp] = useState(() =>
+    getAppFromLocalStorage()
+  );
   const [sortBy, setSortBy] = useState("");
-  //getting data from local storage
-  useEffect(() => {
-    const getExistingApp = JSON.parse(localStorage.getItem("appList"));
-    if (getExistingApp) setInstalledApp(getExistingApp);
-  }, []);
 
   const { loading } = useApp();
   if (loading) return <InstalledLoadingSpinner />;

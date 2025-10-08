@@ -8,11 +8,9 @@ const InstalledApp = ({ iApp, setInstalledApp }) => {
   //removing data from local storage
   const handleUninstall = (id) => {
     const getExistingApp = JSON.parse(localStorage.getItem("appList"));
-    console.log("getExistingApp", getExistingApp);
     const updatedList = getExistingApp.filter((el) => el.id !== id);
-    console.log("updatedList", updatedList);
     //for ui update
-    setInstalledApp((prev) => prev.filter((el) => el.id !== id));
+    setInstalledApp(updatedList);
     toast.error("Item deleted successfully!", {
       icon: <Trash2 color="#991B1B" />,
       position: "bottom-right",
@@ -27,7 +25,6 @@ const InstalledApp = ({ iApp, setInstalledApp }) => {
     localStorage.setItem("appList", JSON.stringify(updatedList));
   };
 
-  // console.log(iApp);
   const { id, image, title, downloads, ratingAvg, size } = iApp;
   return (
     <div className="bg-white p-3 flex justify-between items-center md:flex-row flex-col gap-4 rounded-md">

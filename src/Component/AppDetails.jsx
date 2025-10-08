@@ -1,5 +1,4 @@
 import { useParams } from "react-router";
-import { toast } from "react-toastify";
 import useApp from "../Hooks/useApp";
 import RatingsChart from "./RatingsChart";
 import download from "../assets/icon-downloads.png";
@@ -8,18 +7,35 @@ import rating from "../assets/icon-ratings.png";
 import AppDetailsSkeleton from "./AppDetailsSkeleton";
 import ErrorPage from "../Pages/ErrorPage";
 import AppError from "../Pages/AppError";
-import { useState } from "react";
-import { Download } from "lucide-react";
+import { useEffect, useState } from "react";
+import {
+  getAppFromLocalStorage,
+  updateAppList,
+} from "../Utilities/localStorage";
 
 const AppDetails = () => {
-  const [showInstall, setShowInstall] = useState(true);
   const { apps, loading, error } = useApp();
   const { id } = useParams();
-  if (loading) return <AppDetailsSkeleton />;
-  if (error) return <ErrorPage />;
+  const [showInstall, setShowInstall] = useState(true);
   //finding the relevant app id
   const app = apps.find((el) => el.id === Number(id));
+  //check Local Storage on page load
+  useEffect(() => {
+    if (!app) return;
+    const savedApps = getAppFromLocalStorage();
+    const alreadySavedApps = savedApps.some((el) => el.id === app.id);
+    setShowInstall(!alreadySavedApps);
+  }, [app]);
+
+  const handleAddStorage = () => {
+    if (!app) return <AppError />;
+    const successfullyInstalled = updateAppList(app);
+    if (successfullyInstalled) setShowInstall(false);
+  };
+  if (loading) return <AppDetailsSkeleton />;
+  if (error) return <ErrorPage />;
   if (!app) return <AppError />;
+
   //getting the app info
   const {
     image,
@@ -32,42 +48,6 @@ const AppDetails = () => {
     downloads,
     ratings,
   } = app || {};
-
-  //adding to localstorage
-  const handleAddStorage = () => {
-    //getting data from local storage
-    const getExistingApp = JSON.parse(localStorage.getItem("appList"));
-    let updatedAppList = [];
-    //if data exist
-    if (getExistingApp) {
-      //it data is already in the storage
-      const isDuplicate = getExistingApp.some((item) => item.id === app.id);
-      if (isDuplicate)
-        return toast.error(`Already Installed ${app.title}`, {
-          theme: "dark",
-          position: "bottom-right",
-        });
-      updatedAppList = [...getExistingApp, app];
-    } else {
-      //if no data available
-      updatedAppList.push(app);
-    }
-    // console.log(updatedAppList);
-    //save data to local storage
-    localStorage.setItem("appList", JSON.stringify(updatedAppList));
-    setShowInstall(false);
-    toast.success(`You've Successfully Installed ${app.title}`, {
-      icon: <Download color="#166534" />,
-      theme: "dark",
-      position: "bottom-right",
-      style: {
-        background: "#BBF7D0",
-        color: "#166534",
-        fontWeight: 500,
-        borderRadius: "8px",
-      },
-    });
-  };
 
   return (
     <div className="w-11/12 mx-auto lg:px-8 md:px-4 px-2">
