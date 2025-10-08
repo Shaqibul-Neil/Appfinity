@@ -1,5 +1,5 @@
 import { useParams } from "react-router";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import useApp from "../Hooks/useApp";
 import RatingsChart from "./RatingsChart";
 import download from "../assets/icon-downloads.png";
@@ -9,6 +9,7 @@ import AppDetailsSkeleton from "./AppDetailsSkeleton";
 import ErrorPage from "../Pages/ErrorPage";
 import AppError from "../Pages/AppError";
 import { useState } from "react";
+import { Download } from "lucide-react";
 
 const AppDetails = () => {
   const [showInstall, setShowInstall] = useState(true);
@@ -50,15 +51,22 @@ const AppDetails = () => {
     } else {
       //if no data available
       updatedAppList.push(app);
-      toast.success(`You've Successfully Installed ${app.title}`, {
-        theme: "dark",
-        position: "bottom-right",
-      });
     }
     // console.log(updatedAppList);
     //save data to local storage
     localStorage.setItem("appList", JSON.stringify(updatedAppList));
     setShowInstall(false);
+    toast.success(`You've Successfully Installed ${app.title}`, {
+      icon: <Download color="#166534" />,
+      theme: "dark",
+      position: "bottom-right",
+      style: {
+        background: "#BBF7D0",
+        color: "#166534",
+        fontWeight: 500,
+        borderRadius: "8px",
+      },
+    });
   };
 
   return (
@@ -147,7 +155,6 @@ const AppDetails = () => {
           ))}
         </div>
       </div>
-      <ToastContainer />
     </div>
   );
 };

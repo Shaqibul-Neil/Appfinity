@@ -1,6 +1,7 @@
 import { Outlet } from "react-router";
 import Navbar from "../Component/Navbar";
 import Footer from "../Component/Footer";
+import { ToastContainer } from "react-toastify";
 
 const RootLayout = () => {
   // const navigation = useNavigation();
@@ -19,6 +20,7 @@ const RootLayout = () => {
         <Outlet />
       </main>
       <Footer />
+      <ToastContainer />
     </div>
   );
 };

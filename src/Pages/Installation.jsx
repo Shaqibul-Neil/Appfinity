@@ -23,16 +23,18 @@ const Installation = () => {
   });
 
   return (
-    <div className="installationDiv">
+    <div className="lg:space-y-16 md:space-y-12 space-y-8 py-16 w-11/12 mx-auto lg:px-8 md:px-4 px-2">
       <div className="space-y-4">
-        <h2 className="installationTitle">Your Installed Apps</h2>
+        <h2 className="lg:text-5xl md:text-4xl text-2xl font-bold text-center text-[#001931]">
+          Your Installed Apps
+        </h2>
         <p className="text-center md:px-0 px-8">
           Explore All Apps on the Market developed by us. We code for Millions
         </p>
       </div>
 
-      <div className="installationCont">
-        <h2 className="installAppTitle">
+      <div className="flex md:flex-row flex-col justify-between items-center gap-4">
+        <h2 className="lg:text-2xl text-lg font-semibold pb-1 border-b text-[#001931]">
           {sortedApps.length === 0
             ? "No Apps Installed"
             : sortedApps.length < 9
@@ -57,7 +59,11 @@ const Installation = () => {
       ) : (
         <div className="grid grid-cols-1 gap-4">
           {sortedApps.map((iApp) => (
-            <InstalledApp iApp={iApp} key={iApp.id} />
+            <InstalledApp
+              iApp={iApp}
+              key={iApp.id}
+              setInstalledApp={setInstalledApp}
+            />
           ))}
         </div>
       )}

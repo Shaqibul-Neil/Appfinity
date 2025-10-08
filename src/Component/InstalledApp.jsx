@@ -1,10 +1,34 @@
 import { Server, Trash } from "lucide-react";
 import download from "../assets/icon-downloads.png";
 import rating from "../assets/icon-ratings.png";
+import { toast } from "react-toastify";
+import { Trash2 } from "lucide-react";
 
-const InstalledApp = ({ iApp }) => {
+const InstalledApp = ({ iApp, setInstalledApp }) => {
+  //removing data from local storage
+  const handleUninstall = (id) => {
+    const getExistingApp = JSON.parse(localStorage.getItem("appList"));
+    console.log("getExistingApp", getExistingApp);
+    const updatedList = getExistingApp.filter((el) => el.id !== id);
+    console.log("updatedList", updatedList);
+    //for ui update
+    setInstalledApp((prev) => prev.filter((el) => el.id !== id));
+    toast.error("Item deleted successfully!", {
+      icon: <Trash2 color="#991B1B" />,
+      position: "bottom-right",
+      theme: "light",
+      style: {
+        background: "#FECACA",
+        color: "#991B1B",
+        fontWeight: 500,
+        borderRadius: "8px",
+      },
+    });
+    localStorage.setItem("appList", JSON.stringify(updatedList));
+  };
+
   // console.log(iApp);
-  const { image, title, downloads, ratingAvg, size } = iApp;
+  const { id, image, title, downloads, ratingAvg, size } = iApp;
   return (
     <div className="bg-white p-3 flex justify-between items-center md:flex-row flex-col gap-4 rounded-md">
       <div className="flex items-center gap-4">
@@ -29,7 +53,7 @@ const InstalledApp = ({ iApp }) => {
           </div>
         </div>
       </div>
-      <button className="btnUn">
+      <button className="btnUn" onClick={() => handleUninstall(id)}>
         Uninstall
         <Trash
           size={16}
