@@ -2,8 +2,8 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 lg:pt-16 pt-12">
-      <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
+    <footer className="bg-gray-900 lg:pt-16 pt-12 pb-8">
+      <div className="w-11/12 mx-auto lg:px-8 md:px-4 px-2">
         <div className="lg:flex lg:items-start lg:gap-8">
           <img src="../logo.png" className="mr-3 h-10 w-auto" alt="appfinity" />
 
@@ -15,8 +15,9 @@ const Footer = () => {
                   Get the latest news!
                 </h2>
                 <p className="mt-4 text-gray-400">
-                  Don't be shy. Say hi 👋. Do you have a project or an idea that
-                  could use some help? Let's work together.
+                  At Appfinity, we turn ideas into apps that make life simpler,
+                  smarter & more fun. Got a project or a wild idea? 👋 Let's
+                  build it together!
                 </p>
               </div>
             </div>

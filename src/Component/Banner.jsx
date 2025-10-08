@@ -13,7 +13,7 @@ const Banner = () => {
           Apps
         </h1>
         <p className="text-center lg:px-0 md:px-40 px-10">
-          At Affinity, we craft innovative apps designed to make everyday life
+          At Appfinity, we craft innovative apps designed to make everyday life
           simpler, smarter, and more exciting. <br />
           Our goal is to turn your ideas into digital experiences that truly
           make an impact.
