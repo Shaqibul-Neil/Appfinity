@@ -69,3 +69,4 @@ Key highlights:
   "tailwindcss": "^4.1.14"
 }
 ```
+Live Link: https://app-finity.netlify.app/
