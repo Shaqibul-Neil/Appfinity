@@ -40,7 +40,7 @@ Key highlights:
 - **Styling**: TailwindCSS v4, DaisyUI, Google Fonts (Inter)
 - **HTTP Requests**: Axios
 - **Icons**: Lucide-React, React-Icons
-- **Animations**: Lottie-React
+- **Animations**: Lottie-React, React-slot-counter
 - **Charts**: Recharts
 - **Notifications**: React-Toastify
 - **Loaders & Skeletons**: React Loader Spinner, Custom Skeleton Components
