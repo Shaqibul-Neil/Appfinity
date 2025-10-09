@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import InstalledLoadingSpinner from "../Component/InstalledLoadingSpinner";
 import useApp from "../Hooks/useApp";
 import NoInstalledApp from "../Component/NoInstalledApp";
