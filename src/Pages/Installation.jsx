@@ -15,8 +15,8 @@ const Installation = () => {
   if (loading) return <InstalledLoadingSpinner />;
 
   const sortedApps = [...installedApps].sort((a, b) => {
-    if (sortBy === "size-asc") return a.size - b.size;
-    if (sortBy === "size-desc") return b.size - a.size;
+    if (sortBy === "downloads-asc") return a.downloads - b.downloads;
+    if (sortBy === "downloads-desc") return b.downloads - a.downloads;
     return 0;
   });
 
@@ -46,10 +46,10 @@ const Installation = () => {
           onChange={(e) => setSortBy(e.target.value)}
         >
           <option disabled value="">
-            Sort By Size
+            Sort By Downloads
           </option>
-          <option value="size-asc">Low - High</option>
-          <option value="size-desc">High - Low</option>
+          <option value="downloads-asc">Low - High</option>
+          <option value="downloads-desc">High - Low</option>
         </select>
       </div>
       {sortedApps.length === 0 ? (

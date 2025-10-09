@@ -15,7 +15,7 @@ const RootLayout = () => {
         <Navbar />
       </header>
 
-      <main className="bg-[#f2f2f2] flex-1">
+      <main className="bg-[#f2f2f2] flex-1 md:pb-32 pb-40">
         {/* {isNavigating && <p>Navigating</p>} */}
         <Outlet />
       </main>
