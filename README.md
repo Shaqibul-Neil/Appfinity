@@ -1,21 +1,21 @@
-# Appfinity
+# 🈸Appfinity🈸
 
 **Appfinity** is a modern web application showcasing a curated collection of productive apps. Designed to give users a seamless browsing and management experience, it combines clean UI/UX with interactive animations and real-time features.
 
 ---
 
-## Description
+## ✍🏻Description
 
 Appfinity allows users to explore trending applications, search for apps, and manage installations with a fully responsive interface. It’s built with the latest React ecosystem tools and leverages modern frontend libraries to deliver a polished, dynamic, and interactive experience.
 
 Key highlights:
 
-🎯 Browse all apps with dynamic loading states and skeletons.
-🎯 Search apps in real-time with visual feedback.
-🎯 Install and uninstall apps with local storage persistence.
-🎯 Explore trending apps with charts for insights.
-🎯 Enjoy interactive Lottie animations for empty states and notifications.
-🎯 Fully responsive design with TailwindCSS and DaisyUI.
+🎯 Browse all apps with dynamic loading states and skeletons. <br>
+🎯 Search apps in real-time with visual feedback.<br>
+🎯 Install and uninstall apps with local storage persistence.<br>
+🎯 Explore trending apps with charts for insights.<br>
+🎯 Enjoy interactive Lottie animations for empty states and notifications.<br>
+🎯 Fully responsive design with TailwindCSS and DaisyUI.<br>
 
 ---
 
