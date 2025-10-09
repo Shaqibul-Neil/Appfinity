@@ -10,7 +10,7 @@ const ErrorPage = () => {
           <Navbar />
         </header>
 
-        <main className="bg-[#f2f2f2] flex-1">
+        <main className="bg-[#f2f2f2] flex-1 pb-24">
           <div className="flex flex-col my-24 w-11/12 mx-auto lg:px-8 md:px-4 px-2 gap-8">
             <div className="flex justify-center">
               <img src={error} alt="" className="w-80" />
